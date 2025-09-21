@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap');
 
 :root {
-    --primary-color: #0a192f;
-    --secondary-color: #172a45;
-    --accent-color: #64ffda;
-    --text-color: #ccd6f6;
-    --text-secondary: #8892b0;
-    --neon-blue: #00a8ff;
-    --neon-purple: #9c27b0;
-    --grid-color: rgba(100, 255, 218, 0.1);
+    --primary-color: #1a0d2e;
+    --secondary-color: #2d1b4e;
+    --accent-color: #e94560;
+    --text-color: #f5f3ff;
+    --text-secondary: #c4b5fd;
+    --neon-pink: #ff006e;
+    --neon-purple: #8b5cf6;
+    --neon-cyan: #06ffa5;
+    --grid-color: rgba(233, 69, 96, 0.1);
 }
 
 /* 添加新的样式 */
@@ -18,7 +19,7 @@
 }
 
 .title-accent {
-    color: var(--neon-blue);
+    color: var(--neon-pink);
     font-weight: 700;
     letter-spacing: 2px;
 }
@@ -117,7 +118,7 @@ body::before {
     width: 100%;
     height: 100%;
     background: 
-        linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)),
+        linear-gradient(rgba(26, 13, 46, 0.8), rgba(26, 13, 46, 0.8)),
         repeating-linear-gradient(0deg, transparent, transparent 50px, var(--grid-color) 50px, var(--grid-color) 51px),
         repeating-linear-gradient(90deg, transparent, transparent 50px, var(--grid-color) 50px, var(--grid-color) 51px);
     z-index: -1;
@@ -129,8 +130,8 @@ body::before {
     padding: 15px;
     background-color: var(--secondary-color);
     border-radius: 15px;
-    box-shadow: 0 0 30px rgba(0, 168, 255, 0.3);
-    border: 1px solid rgba(100, 255, 218, 0.2);
+    box-shadow: 0 0 30px rgba(233, 69, 96, 0.4);
+    border: 1px solid rgba(233, 69, 96, 0.3);
     position: relative;
     overflow: hidden;
 }
@@ -142,7 +143,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 5px;
-    background: linear-gradient(90deg, var(--neon-blue), var(--accent-color), var(--neon-purple));
+    background: linear-gradient(90deg, var(--neon-pink), var(--accent-color), var(--neon-purple), var(--neon-cyan));
 }
 
 h1 {
@@ -153,7 +154,7 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 700;
-    text-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+    text-shadow: 0 0 15px rgba(233, 69, 96, 0.6);
     position: relative;
     font-size: 1.5rem;
 }
@@ -173,9 +174,9 @@ h1::after {
     align-items: center;
     margin-bottom: 15px;
     padding: 10px;
-    background-color: rgba(23, 42, 69, 0.8);
+    background-color: rgba(45, 27, 78, 0.8);
     border-radius: 8px;
-    border: 1px solid rgba(100, 255, 218, 0.1);
+    border: 1px solid rgba(233, 69, 96, 0.2);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -197,7 +198,7 @@ h1::after {
     -webkit-appearance: none;
     width: 120px;
     height: 6px;
-    background: linear-gradient(90deg, #0a192f, var(--accent-color));
+    background: linear-gradient(90deg, #1a0d2e, var(--accent-color));
     border-radius: 5px;
     outline: none;
 }
@@ -210,7 +211,7 @@ h1::after {
     border-radius: 50%;
     background: var(--accent-color);
     cursor: pointer;
-    box-shadow: 0 0 10px rgba(100, 255, 218, 0.8);
+    box-shadow: 0 0 10px rgba(233, 69, 96, 0.8);
 }
 
 .speed-control span {
@@ -232,8 +233,8 @@ button {
     font-weight: 600;
     letter-spacing: 1px;
     transition: all 0.3s ease;
-    border: 1px solid rgba(100, 255, 218, 0.2);
-    box-shadow: 0 0 8px rgba(100, 255, 218, 0.1);
+    border: 1px solid rgba(233, 69, 96, 0.3);
+    box-shadow: 0 0 8px rgba(233, 69, 96, 0.2);
     position: relative;
     overflow: hidden;
     font-size: 0.8rem;
@@ -242,7 +243,7 @@ button {
 button:hover {
     background-color: var(--secondary-color);
     transform: translateY(-1px);
-    box-shadow: 0 3px 10px rgba(100, 255, 218, 0.2);
+    box-shadow: 0 3px 10px rgba(233, 69, 96, 0.4);
 }
 
 button:active {
@@ -267,8 +268,8 @@ button:disabled {
     display: block;
     background-color: var(--primary-color);
     border-radius: 5px;
-    box-shadow: 0 0 15px rgba(0, 168, 255, 0.2);
-    border: 1px solid rgba(100, 255, 218, 0.2);
+    box-shadow: 0 0 15px rgba(233, 69, 96, 0.3);
+    border: 1px solid rgba(233, 69, 96, 0.2);
 }
 
 .game-stats {
@@ -279,9 +280,9 @@ button:disabled {
 .current-stats, .history-stats {
     flex: 1;
     padding: 20px;
-    background-color: rgba(23, 42, 69, 0.8);
+    background-color: rgba(45, 27, 78, 0.8);
     border-radius: 10px;
-    border: 1px solid rgba(100, 255, 218, 0.1);
+    border: 1px solid rgba(233, 69, 96, 0.2);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -336,7 +337,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 10px;
-    background-color: rgba(23, 42, 69, 0.8);
+    background-color: rgba(45, 27, 78, 0.8);
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
@@ -345,13 +346,13 @@ table {
 th, td {
     padding: 8px 10px;
     text-align: left;
-    border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+    border-bottom: 1px solid rgba(233, 69, 96, 0.2);
     color: var(--text-color);
     font-size: 0.85rem;
 }
 
 th {
-    background-color: rgba(10, 25, 47, 0.9);
+    background-color: rgba(26, 13, 46, 0.9);
     color: var(--accent-color);
     font-family: 'Orbitron', sans-serif;
     letter-spacing: 1px;
@@ -364,24 +365,24 @@ tr:last-child td {
 }
 
 tr:hover td {
-    background-color: rgba(100, 255, 218, 0.05);
+    background-color: rgba(233, 69, 96, 0.08);
 }
 
 .controls-info {
     margin-top: 10px;
     padding: 10px;
-    background-color: rgba(23, 42, 69, 0.8);
+    background-color: rgba(45, 27, 78, 0.8);
     border-radius: 8px;
-    border: 1px solid rgba(100, 255, 218, 0.1);
+    border: 1px solid rgba(233, 69, 96, 0.2);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     font-size: 0.85rem;
 }
 
 /* 添加动画效果 */
 @keyframes glow {
-    0% { box-shadow: 0 0 10px rgba(100, 255, 218, 0.3); }
-    50% { box-shadow: 0 0 20px rgba(100, 255, 218, 0.5); }
-    100% { box-shadow: 0 0 10px rgba(100, 255, 218, 0.3); }
+    0% { box-shadow: 0 0 10px rgba(233, 69, 96, 0.4); }
+    50% { box-shadow: 0 0 20px rgba(233, 69, 96, 0.6); }
+    100% { box-shadow: 0 0 10px rgba(233, 69, 96, 0.4); }
 }
 
 .container {
