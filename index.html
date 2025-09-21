@@ -29,7 +29,31 @@
             <canvas id="game-board" width="320" height="320"></canvas>
             <div class="game-overlay" id="game-overlay"></div>
         </div>
-        
+    </div>
+    
+    <!-- 移动端触摸控制按钮 -->
+    <div class="touch-controls">
+        <div class="touch-control-row">
+            <button class="touch-btn" id="up-btn" data-direction="up">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>
+        <div class="touch-control-row">
+            <button class="touch-btn" id="left-btn" data-direction="left">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <button class="touch-btn" id="down-btn" data-direction="down">
+                <i class="fas fa-arrow-down"></i>
+            </button>
+            <button class="touch-btn" id="right-btn" data-direction="right">
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+        <div class="control-text">触摸按钮控制移动 | 点击暂停按钮暂停游戏</div>
+    </div>
+    
+    <!-- 游戏统计信息 -->
+    <div class="stats-container">
         <div class="game-stats">
             <div class="current-stats">
                 <h3><i class="fas fa-chart-line"></i> 当前游戏</h3>
@@ -59,30 +83,6 @@
                         </tbody>
                     </table>
                 </div>
-            </div>
-        </div>
-        
-        <div class="controls-info">
-            <div class="control-text">触摸按钮控制移动 | 点击暂停按钮暂停游戏</div>
-        </div>
-        
-        <!-- 移动端触摸控制按钮 -->
-        <div class="touch-controls">
-            <div class="touch-control-row">
-                <button class="touch-btn" id="up-btn" data-direction="up">
-                    <i class="fas fa-arrow-up"></i>
-                </button>
-            </div>
-            <div class="touch-control-row">
-                <button class="touch-btn" id="left-btn" data-direction="left">
-                    <i class="fas fa-arrow-left"></i>
-                </button>
-                <button class="touch-btn" id="down-btn" data-direction="down">
-                    <i class="fas fa-arrow-down"></i>
-                </button>
-                <button class="touch-btn" id="right-btn" data-direction="right">
-                    <i class="fas fa-arrow-right"></i>
-                </button>
             </div>
         </div>
     </div>
