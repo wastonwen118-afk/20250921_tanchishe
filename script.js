@@ -9,6 +9,12 @@ const currentScore = document.getElementById('current-score');
 const currentLength = document.getElementById('current-length');
 const historyBody = document.getElementById('history-body');
 
+// 触摸控制按钮
+const upBtn = document.getElementById('up-btn');
+const downBtn = document.getElementById('down-btn');
+const leftBtn = document.getElementById('left-btn');
+const rightBtn = document.getElementById('right-btn');
+
 // 游戏配置
 const gridSize = 20;
 const gridWidth = canvas.width / gridSize;
@@ -403,11 +409,59 @@ function handleKeydown(e) {
     }
 }
 
+// 触摸控制处理函数
+function handleTouchControl(newDirection) {
+    if (!gameRunning) return;
+    
+    // 防止反向移动
+    if ((direction === 'up' && newDirection === 'down') ||
+        (direction === 'down' && newDirection === 'up') ||
+        (direction === 'left' && newDirection === 'right') ||
+        (direction === 'right' && newDirection === 'left')) {
+        return;
+    }
+    
+    nextDirection = newDirection;
+}
+
+// 添加触摸按钮事件监听
+function addTouchEventListeners() {
+    // 为每个触摸按钮添加点击和触摸事件
+    const touchButtons = [
+        { btn: upBtn, direction: 'up' },
+        { btn: downBtn, direction: 'down' },
+        { btn: leftBtn, direction: 'left' },
+        { btn: rightBtn, direction: 'right' }
+    ];
+    
+    touchButtons.forEach(({ btn, direction }) => {
+        // 点击事件
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            handleTouchControl(direction);
+        });
+        
+        // 触摸事件
+        btn.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+            handleTouchControl(direction);
+        });
+        
+        // 防止长按选择文本
+        btn.addEventListener('selectstart', (e) => {
+            e.preventDefault();
+        });
+    });
+}
+
 // 事件监听
 startBtn.addEventListener('click', startGame);
 pauseBtn.addEventListener('click', togglePause);
 speedSlider.addEventListener('input', updateSpeed);
 document.addEventListener('keydown', handleKeydown);
+
+// 初始化触摸控制
+addTouchEventListeners();
 
 // 初始化游戏
 initGame();
